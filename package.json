@@ -1,0 +1,40 @@
+{
+  "name": "acuris-geocoding-widget",
+  "version": "0.1.0",
+  "description": "Forward geocoding widget: address -> latitude/longitude with an explicit precision tier (rooftop, street, postcode, locality). 240+ countries, single-line or fielded input, framework-free JavaScript. MIT.",
+  "private": false,
+  "license": "MIT",
+  "author": "Acuris GmbH <support@acuris-geo.com>",
+  "homepage": "https://github.com/Acuris-GmbH/acuris-geocoding-widget#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Acuris-GmbH/acuris-geocoding-widget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Acuris-GmbH/acuris-geocoding-widget/issues"
+  },
+  "main": "src/acuris-geocoding.js",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "geocoding",
+    "geocoder",
+    "forward-geocoding",
+    "address-to-coordinates",
+    "lat-lng",
+    "javascript",
+    "widget",
+    "vanilla-js",
+    "acuris"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check-core": "node scripts/check-core.mjs",
+    "size": "node scripts/size.mjs",
+    "prepublishOnly": "node -e \"console.error('This package is not published to npm. Use the files in src/.'); process.exit(1)\""
+  }
+}

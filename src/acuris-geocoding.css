@@ -1,0 +1,41 @@
+/* Acuris geocoding widget | MIT | Copyright (c) 2026 Acuris GmbH
+   Override the custom properties to theme it. */
+.acuris-geo {
+  --acuris-fg: #1d2330; --acuris-muted: #5b6475; --acuris-border: #c9cfda; --acuris-bg: #fff;
+  --acuris-accent: #0b5cad; --acuris-ok: #1d7a3a; --acuris-warn: #9a5b00; --acuris-bad: #b42318;
+  display: grid; gap: 6px; max-width: 34rem; font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--acuris-fg);
+}
+.acuris-geo label { font-weight: 600; font-size: 13px; margin-top: 4px; }
+.acuris-geo input, .acuris-geo select {
+  font: inherit; padding: 8px 10px; border: 1px solid var(--acuris-border); border-radius: 6px; background: var(--acuris-bg); color: inherit;
+}
+.acuris-geo input:focus, .acuris-geo select:focus, .acuris-geo button:focus-visible { outline: 2px solid var(--acuris-accent); outline-offset: 1px; }
+.acuris-geo [hidden] { display: none !important; }
+.acuris-geo button[type="submit"] {
+  justify-self: start; margin-top: 6px; font: inherit; font-weight: 600; padding: 8px 16px; border: 0; border-radius: 6px;
+  background: var(--acuris-accent); color: #fff; cursor: pointer;
+}
+.acuris-result { margin-top: 8px; padding: 12px; border: 1px solid var(--acuris-border); border-radius: 8px; background: var(--acuris-bg); }
+.acuris-addr { white-space: pre-line; margin: 8px 0; font-weight: 500; }
+.acuris-tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; color: #fff; background: var(--acuris-muted); }
+.acuris-tag--nomatch { background: var(--acuris-bad); }
+.acuris-tag--point { background: var(--acuris-ok); }
+.acuris-tag--area { background: var(--acuris-warn); }
+.acuris-latlng { margin: 8px 0 4px; font: 600 18px/1.3 ui-monospace, monospace; }
+.acuris-latlng span { font: 600 12px/1 system-ui, sans-serif; color: var(--acuris-muted); margin-left: 4px; }
+.acuris-meta code { font-size: 12px; }
+.acuris-warn { margin: 6px 0; padding: 6px 10px; border-left: 3px solid var(--acuris-warn); font-size: 13px; }
+.acuris-result a { color: var(--acuris-accent); }
+.acuris-meta, .acuris-attrib { margin: 4px 0; font-size: 13px; color: var(--acuris-muted); }
+.acuris-prec { display: inline-block; margin-left: 6px; padding: 0 6px; border-radius: 4px; border: 1px solid currentColor; font-size: 12px; }
+.acuris-prec--point { color: var(--acuris-ok); }
+.acuris-prec--area { color: var(--acuris-warn); }
+.acuris-error { color: var(--acuris-bad); margin: 8px 0 0; }
+.acuris-busy { color: var(--acuris-muted); margin: 8px 0 0; }
+.acuris-attrib { font-size: 12px; }
+.acuris-powered { margin: 8px 0 0; font-size: 12px; text-align: right; }
+.acuris-powered a { color: var(--acuris-muted); }
+@media (prefers-color-scheme: dark) {
+  .acuris-geo { --acuris-fg: #e6e9ef; --acuris-muted: #a3acbd; --acuris-border: #3a4252; --acuris-bg: #161a22; --acuris-accent: #5aa2ff; --acuris-ok: #3fb168; --acuris-warn: #e0a030; --acuris-bad: #f07167; }
+  .acuris-geo button[type="submit"], .acuris-tag { color: #0b1220; }
+}
