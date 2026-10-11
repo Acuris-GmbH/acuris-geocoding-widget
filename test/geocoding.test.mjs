@@ -21,7 +21,7 @@ test('geocode: GET /geocode on the main host, gbr on the PAF host', async () => 
   await W.geocode('Schönhauser Allee 36, Berlin', { apiKey: KEY, country: 'deu', fetch: mockFetch(200, {}, calls) });
   assert.equal(calls[0].url, 'https://api.acuris-geo.com/geocode?country=deu&q=Sch%C3%B6nhauser%20Allee%2036%2C%20Berlin');
   assert.equal(calls[0].init.method, 'GET');
-  assert.equal(calls[0].init.headers['X-Acuris-Client'], 'gh-geocoding/0.1.0');
+  assert.equal(calls[0].init.headers['X-Acuris-Client'], 'gh-geocoding/0.1.1');
   await W.geocode('10 Downing Street, London', { apiKey: KEY, country: 'gbr', fetch: mockFetch(200, {}, calls) });
   assert.match(calls[1].url, /^https:\/\/paf\.acuris-geo\.com\/geocode\?country=gbr&q=/);
 });
@@ -64,7 +64,7 @@ test('404 no_match renders a No match card with candidates', async () => {
 test('render: attribution link on by default, removable, API attribution kept', () => {
   const r = { lat: 1, lng: 2, point_coordinate: true, attribution: 'Data <source>' };
   const on = W.resultHtml(r);
-  assert.match(on, /<a href="https:\/\/www\.acuris-geo\.com\/" target="_blank" rel="noopener">Geocoding by ACURIS-geo\.com<\/a>/);
+  assert.match(on, /<a href="https:\/\/www\.acuris-geo\.com\/" target="_blank" rel="noopener">Powered by Acuris Geo<\/a>/);
   assert.match(on, /<p class="acuris-attrib">Data &lt;source&gt;<\/p>/);
   const off = W.resultHtml(r, { attribution: false });
   assert.doesNotMatch(off, /ACURIS-geo\.com/);

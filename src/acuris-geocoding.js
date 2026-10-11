@@ -7,9 +7,9 @@
 })(typeof self !== 'undefined' ? self : this, function (C) {
   'use strict';
 
-  var VERSION = '0.1.0';
+  var VERSION = '0.1.1';
   var FIELDS = [['street', 'Street'], ['hno', 'House number'], ['city', 'City'], ['postalcode', 'Postcode'], ['state', 'State / region']];
-  var ATTRIB = 'Geocoding by ACURIS-geo.com';
+  var ATTRIB = 'Powered by Acuris Geo';
   var ATTRIB_URL = 'https://www.acuris-geo.com/';
 
   // Visible attribution link, on by default; opts.attribution === false removes it.

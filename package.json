@@ -1,6 +1,6 @@
 {
   "name": "acuris-geocoding-widget",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Forward geocoding widget: address -> latitude/longitude with an explicit precision tier (rooftop, street, postcode, locality). 240+ countries, single-line or fielded input, framework-free JavaScript. MIT.",
   "private": false,
   "license": "MIT",

@@ -5,7 +5,7 @@
 [![CI](https://github.com/Acuris-GmbH/acuris-geocoding-widget/actions/workflows/ci.yml/badge.svg)](https://github.com/Acuris-GmbH/acuris-geocoding-widget/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Status:** beta (0.1.0)
+**Status:** beta (0.1.1)
 
 ---
 
@@ -70,7 +70,7 @@ in `sessionStorage` for that tab only).
 | `onResult` | none | `function (response)`. |
 | `onError` | none | `function (error)` with `{status, code, message, resetsAt}`. |
 | `fetch` | `window.fetch` | Inject your own `fetch`. |
-| `attribution` | `true` | Shows the link "Geocoding by ACURIS-geo.com" under each result; set `false` to turn it off. |
+| `attribution` | `true` | Shows the link "Powered by Acuris Geo" under each result; set `false` to turn it off. |
 
 ### Events
 
